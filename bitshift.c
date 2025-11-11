@@ -6,7 +6,7 @@ void printb(long n);
 
 int main(void) {
 
-    printf("[first binary number] [second binary number]\n");
+    printf("[+first binary number] [+second binary number]\n");
 
     // 64 + null terminator
     char str_A[65];
@@ -40,7 +40,7 @@ int main(void) {
         A = A << 1;
         B = B >> 1;
         printb(A);
-        printf("\n");
+        printf(" ");
         printb(B);
         printf("\n");
     }
@@ -107,7 +107,7 @@ void printb(long __n) {
         * https://stackoverflow.com/questions/10493411/what-is-bit-masking  *
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         *
-        * wenn der "bit set" ist, dann gibt __n & mask eine nummer größer als 0 raus.
+        * wenn der bit "set" ist, dann gibt __n & mask eine nummer größer als 0 raus.
         */
         printf("%d", !!(__n & mask)); 
         mask >>= 1;
